@@ -1,0 +1,185 @@
+<html>
+  <head>
+    <title>Student Innovation Challenge</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;   /* center left-right */
+        align-items: flex-start;   /* start at the top */
+        min-height: 100vh;
+        margin: 0;
+        padding: 30px;             /* space from the very top */
+      }
+      form {
+        background: #fff;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        max-width: 400px;
+        width: 100%;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      form:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      }
+      fieldset {
+        margin-bottom: 1.5em;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        transition: border-color 0.3s;
+      }
+      fieldset:hover {
+        border-color: #007BFF;
+      }
+      legend {
+        font-weight: bold;
+        padding: 0 8px;
+      }
+      label {
+        display: block;
+        margin-top: 0.5em;
+      }
+      input, select, textarea, button {
+        margin-top: 0.2em;
+        padding: 6px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+      input:focus, select:focus, textarea:focus {
+        border-color: #007BFF;
+        box-shadow: 0 0 5px rgba(0,123,255,0.4);
+        outline: none;
+      }
+      input:hover, select:hover, textarea:hover {
+        border-color: #555;
+      }
+      .form-actions {
+        text-align: center;
+        margin-top: 1em;
+      }
+      .form-actions button {
+        width: auto;
+        margin: 0 5px;
+        cursor: pointer;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+      .form-actions button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+      .form-actions button[type="reset"] {
+        background-color: #6c757d;
+      }
+      .form-actions button[type="reset"]:hover {
+        background-color: #5a6268;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <!-- Personal Info -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname">
+
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname">
+
+        <label for="dob">Date of Birth:</label>
+        <input id="dob" name="dob" type="date">
+
+        <label for="age">Age:</label>
+        <input id="age" name="age" type="number" placeholder="18">
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+          <option value="">-- Select a country --</option>
+          <option value="ke">Kenya</option>
+          <option value="za">South Africa</option>
+          <option value="ng">Nigeria</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+      </fieldset>
+
+      <!-- Contact Info -->
+      <fieldset>
+        <legend>Contact Information</legend>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com">
+
+        <label for="telephone">Telephone:</label>
+        <input type="tel" id="telephone" name="telephone">
+
+        <label for="website">Website:</label>
+        <input id="website" name="website" type="url" placeholder="https://example.com">
+      </fieldset>
+
+      <!-- Account Info -->
+      <fieldset>
+        <legend>Account Details</legend>
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password" placeholder="Enter your password">
+      </fieldset>
+
+      <!-- Preferences -->
+      <fieldset>
+        <legend>Preferences</legend>
+        <label for="volume">Volume:</label>
+        <input id="volume" name="volume" type="range">
+
+        <label for="skills">Select Your Skills</label>
+        <select id="skills" name="skills[]" multiple size="5">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+        </select>
+      </fieldset>
+
+      <!-- Gender -->
+      <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </fieldset>
+
+      <!-- Interests -->
+      <fieldset>
+        <legend>Interests</legend>
+        <label><input type="checkbox" name="interests" value="sports"> Sports</label>
+        <label><input type="checkbox" name="interests" value="music"> Music</label>
+        <label><input type="checkbox" name="interests" value="travel"> Travel</label>
+        <label><input type="checkbox" name="interests" value="tech"> Technology</label>
+      </fieldset>
+
+      <!-- Message -->
+      <fieldset>
+        <legend>Message</legend>
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
+      </fieldset>
+
+      <!-- Actions -->
+      <div class="form-actions">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>
